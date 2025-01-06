@@ -34,7 +34,7 @@ class SchedulesController {
         await axios.post(url, {
             operatorId: body.toUserId,
             sectorId: body.sectorId,
-            contactId: body.whatsappId,
+            contactId: body.whatsappId
         });
 
         return res.status(201).json({ message: "successful inserted schedule", data: insertedSchedule });
@@ -66,6 +66,7 @@ class SchedulesController {
     }
 
     private async findAllByClient(req: Request, res: Response) {
+
         const { clientName } = req.params;
 
         const schedules = await prisma.schedule.findMany({

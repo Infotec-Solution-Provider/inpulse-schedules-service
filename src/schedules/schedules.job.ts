@@ -21,6 +21,7 @@ async function checkSchedules() {
             operatorId: schedule.toUserId,
             contactId: schedule.whatsappId,
             sectorId: schedule.sectorId,
+            is_schedule: 1
         }
 
         await Promise.all(
