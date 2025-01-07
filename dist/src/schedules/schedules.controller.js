@@ -31,7 +31,7 @@ class SchedulesController {
         await axios_1.default.post(url, {
             operatorId: body.toUserId,
             sectorId: body.sectorId,
-            contactId: body.whatsappId,
+            contactId: body.whatsappId
         });
         return res.status(201).json({ message: "successful inserted schedule", data: insertedSchedule });
     }
